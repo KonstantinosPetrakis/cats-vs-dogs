@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% block body %}
+<form
+  id="form"
+  action="/result"
+  method="POST"
+  enctype="multipart/form-data"
+  class="transparent-container"
+>
+  <h2>Does it meow or woof?</h2>
+  <label id="file-wrapper" tabindex="1">
+    <p id="file-label">Drop or click to upload</p>
+    <input type="file" name="file" id="file" />
+  </label>
+  <label>
+    <div>Or paste a URL</div>
+    <input type="url" name="url" id="url" placeholder="https://..." />
+  </label>
+  <button class="cute-button" onclick="submitForm(event)">Tell me!</button>
+</form>
+{% endblock %}

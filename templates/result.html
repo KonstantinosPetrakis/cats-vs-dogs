@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block body %}
+<div class="transparent-container">
+  <h2>Result</h2>
+
+  <h3>The animal is definitely a <strong>{{winner}}</strong>!</h3>
+
+  <ul>
+    <li>Probability to be a cat: <u>{{cat}}</u></li>
+    <li>Probability to be a dog: <u>{{dog}}</u></li>
+  </ul>
+
+  <div class="image-wrapper">
+    <div class="image-border {{winner}}"></div>
+    <img class="main-image" src="{{image}}" alt="user entered cat or dog" />
+  </div>
+
+  <a class="cute-button" href="/"> Try with another image! </a>
+</div>
+{% endblock %}

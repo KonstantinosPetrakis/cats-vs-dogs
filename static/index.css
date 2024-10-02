@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  position: relative;
+}
+
+html {
+  background-image: url("/static/background.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.transparent-container {
+  margin: 50px auto 0 auto;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.479);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+#file-wrapper {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px dashed;
+  border-radius: 5px;
+}
+
+#file {
+  display: none;
+}
+
+input[type="url"] {
+  width: 100%;
+  font-size: 1rem;
+  border: 1px solid;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0);
+}
+
+.cute-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  background-image: url("/static/button.jpeg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid rgb(184, 184, 184);
+  border-radius: 10px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+ul {
+  margin: auto;
+  text-align: left;
+  list-style: none;
+}
+
+li {
+  position: relative;
+  left: -20px;
+  margin: 5px;
+}
+
+li:before {
+  content: "";
+  display: inline-block;
+  background-image: url("/static/paw.png");
+  margin: -5px 10px;
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.image-border {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+}
+
+.image-border.cat {
+  background-image: url("/static/cat.png");
+}
+
+.image-border.dog {
+  background-image: url("/static/dog.png");
+}
+
+img {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 100%;
+}
+
+button:focus-visible,
+label:focus-visible,
+input:focus-visible {
+  outline: 2px solid orange;
+}
+
+@media (max-width: 500px) {
+  .transparent-container {
+    margin: 10px;
+  }
+}
